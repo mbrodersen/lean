@@ -14,7 +14,7 @@ if (LEAN_SPECIAL_VERSION_DESC)
 endif()
 
 set(LEAN_EXTRA_LINKER_FLAGS "" CACHE STRING "Additional flags used by the linker")
-set(LEAN_EXTRA_CXX_FLAGS "" CACHE STRING "Additional flags used by the C++ compiler")
+set(LEAN_EXTRA_CXX_FLAGS "-Werror -Wno-ignored-qualifiers -Wno-implicit-fallthrough -Wno-deprecated-copy -Wno-pessimizing-move -Wno-maybe-uninitialized -Wno-catch-value -Wno-cast-function-type" CACHE STRING "Additional flags used by the C++ compiler")
 
 if (NOT CMAKE_BUILD_TYPE)
   message(STATUS "No build type selected, default to Release")
